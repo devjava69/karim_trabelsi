@@ -7,8 +7,16 @@ function Footer() {
     return (
         <div className='footer'>
             <div className='socialMedia'>
-                <LinkedInIcon />
-                <GitHubIcon />
+                <LinkedInIcon onClick=
+                    {() =>
+                        window.open('https://www.linkedin.com/in/karimtrabelsi', '_blank')
+                    }
+                />
+                <GitHubIcon onClick=
+                    {() =>
+                        window.open('https://github.com/karimDevWM?tab=repositories', '_blank')
+                    }
+                />
             </div>
             <p> &copy; 2022 karimtrabelsi-digital.com </p>
         </div>
