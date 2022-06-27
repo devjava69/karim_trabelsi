@@ -57,6 +57,12 @@
     font-size: 20px;
 }
 
+.arrowDown{
+    margin-top: 50px;
+    border-radius: 100%;
+    border: 1px solid white;
+}
+
 @media only screen and (max-width: 768px) {
     .prompt {
         margin-top: 50px;
