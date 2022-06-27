@@ -10,6 +10,7 @@ function ProjectDisplay() {
     return (
         <div className='project'>
             <h1> {project.name} </h1>
+            <p>En cours de développement</p>
             <img src={project.image} />
             <GithubIcon />
             <p>
