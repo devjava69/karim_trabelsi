@@ -2,6 +2,7 @@ import React from 'react';
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import EmailIcon from "@material-ui/icons/Email";
 import GithubIcon from "@material-ui/icons/GitHub";
+import ArrowDownIcon from "@material-ui/icons/ArrowDownward";
 import "../styles/Home.css";
 
 function Home() {
@@ -13,12 +14,33 @@ function Home() {
           <p>
             A web developer with a passion for learning and creating
           </p>
-          <LinkedInIcon />
-          <GithubIcon />
-          <EmailIcon />
+          <LinkedInIcon onClick=
+            {() =>
+              window.open('https://www.linkedin.com/in/karimtrabelsi', '_blank')
+            }
+          />
+          <GithubIcon onClick=
+            {() =>
+              window.open('https://github.com/karimDevWM?tab=repositories', '_blank')
+            }
+          />
+          <EmailIcon onClick=
+            {() =>
+              window.open('mailto:ka.trabelsi9@gmail.com', '_blank')
+            }
+          />
+        </div>
+        <div className='downArrow'
+          onClick={
+            () => window.location.replace("/#skills")
+          }
+        >
+          <ArrowDownIcon
+            style={{ fontSize: 100 }}
+          />
         </div>
       </div>
-      <div className='skills'>
+      <div className='skills' id="skills">
         <h1>Skills</h1>
         <ol className='list'>
           <li className='item'>
