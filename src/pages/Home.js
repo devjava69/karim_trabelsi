@@ -35,8 +35,8 @@ function Home() {
             () => window.location.replace("/#skills")
           }
         >
-          <ArrowDownIcon
-            style={{ fontSize: 100 }}
+          <ArrowDownIcon className='arrowDown'
+            style={{ fontSize: 100}}
           />
         </div>
       </div>
