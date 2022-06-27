@@ -13,7 +13,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #21325e;
+    background-color: #06015d;
     color: #f0f0f0;
 }
 
@@ -55,6 +55,18 @@
 
 .list span {
     font-size: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    .prompt {
+        margin-top: 50px;
+    }
+}
+
+@media only screen and (max-width: 412px) {
+    .prompt {
+        margin-top: 300px;
+    }
 }
 
 @media only screen and (max-width: 600px) {
