@@ -4,7 +4,7 @@ import flask_react from '../assets/flask_react.png';
 // list of objects creation
 export const ProjectList = [
     {
-        name: "Flask React Todo List",
+        name: "Flask React Blog",
         image: flask_react,
         skills : "React JS, Python, SQLAlchemy, Mysql",
         github_url : "https://github.com/karimDevWM/karim_portfolio",
