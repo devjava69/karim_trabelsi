@@ -7,5 +7,6 @@ export const ProjectList = [
         name: "Flask React Todo List",
         image: flask_react,
         skills : "React JS, Python, SQLAlchemy, Mysql",
+        github_url : "https://github.com/karimDevWM/karim_portfolio",
     }
 ]
