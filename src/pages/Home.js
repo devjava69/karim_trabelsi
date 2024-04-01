@@ -12,7 +12,7 @@ function Home() {
         <h2>Hi, My Name is Karim</h2>
         <div className='prompt'>
           <p>
-            A web developer with a passion for learning and creating
+            A junior Applications Conceptor-Developer with a passion for learning and creating
           </p>
           <LinkedInIcon onClick=
             {() =>
@@ -45,23 +45,27 @@ function Home() {
         <ol className='list'>
           <li className='item'>
             <h2>Front-End</h2>
-            <span>HTML, CSS, Bootstrap, NPM, Javascript</span>
+            <span>HTML, CSS, Bootstrap, Javascript, React, Material UI, Flutter</span>
           </li>
           <li className='item'>
             <h2>Back-End</h2>
-            <span>PHP, Python, Flask, Symfony</span>
+            <span>Flask, Symfony, NestJS, ASP .Net Core</span>
           </li>
           <li className='item'>
             <h2>Database</h2>
-            <span>SQL server, Mysql</span>
+            <span>SQL server, MySQL, mongoDb</span>
           </li>
           <li className='item'>
-            <h2>Transversal</h2>
-            <span>GitHub, Gitlab, Git versioning, Trello, Linux, Ubuntu</span>
+            <h2>Gestion de projets</h2>
+            <span>GitHub, Gitlab, Trello, Azure DevOps boards</span>
+          </li>
+          <li className='item'>
+            <h2>Systèmes d'exploitations</h2>
+            <span>Ubuntu, windows</span>
           </li>
           <li className='item'>
             <h2>Languages</h2>
-            <span>Python, PHP, C#, Javascript</span>
+            <span>Python, PHP, C#, Javascript, Typescript</span>
           </li>
         </ol>
       </div>
