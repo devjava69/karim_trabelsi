@@ -1,7 +1,4 @@
-name: Deploy Images to GHCR
-
-env:
-  NODE_VERSION: '18.17.x'
+name: Continuous Deployment
 
 on:
   pull_request:
@@ -9,23 +6,22 @@ on:
       - main
 
 jobs:
-      push-store-image:
-        runs-on: ubuntu-latest
-        permissions:
-          contents: read
-          packages: write
-        steps:
-          - name: 'Checkout GitHub Action'
-            uses: actions/checkout@main
-
-          - name: 'Login to GitHub Container Registry'
-            uses: docker/login-action@v1
-            with:
-              registry: ghcr.io
-              username: ${{github.actor}}
-              password: ${{secrets.GITHUB_TOKEN}}
-
-          - name: 'Build Inventory Image'
-            run: |
-              docker build . --tag ghcr.io/devjava69/karim_trabelsi:latest
-              docker push ghcr.io/devjava69/karim_trabelsi:latest
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+      
+    - name: Login to GitHub Container Registry
+      run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.repository_owner }} --password-stdin
+      
+    - name: Build Docker image
+      run: docker build -t ghcr.io/${{ github.repository_owner }}/karim_trabelsi .
+      
+    - name: Push Docker image to GHCR
+      run: docker push ghcr.io/${{ github.repository_owner }}/karim_trabelsi
+      
+    - name: Deploy
+      run: |
+        # Your deployment script or commands go here
