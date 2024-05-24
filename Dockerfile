@@ -7,6 +7,6 @@ COPY package-lock.json /app
 
 RUN npm install
 
-COPY . /app
+COPY . ./app
 
 CMD ["npm", "start"]
