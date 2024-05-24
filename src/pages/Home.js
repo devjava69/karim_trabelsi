@@ -4,8 +4,18 @@ import EmailIcon from "@material-ui/icons/Email";
 import GithubIcon from "@material-ui/icons/GitHub";
 import ArrowDownIcon from "@material-ui/icons/ArrowDownward";
 import "../styles/Home.css";
+import resume from '../assets/CV Karim.pdf'
+
 
 function Home() {
+
+  function handleDownload(){
+    let link = document.createElement('a');
+    link.href = resume;
+    link.download = 'CV Karim Trabelsi.pdf';
+    link.click();
+  }
+
   return (
     <div className='home'>
       <div className='about'>
@@ -29,6 +39,29 @@ function Home() {
               window.open('mailto:ka.trabelsi9@gmail.com', '_blank')
             }
           />
+          {/* <ArrowDownIcon>
+            <a href={resume} download={resume}>Download My Resume</a>
+          </ArrowDownIcon> */}
+
+          {/* <Button
+            variant='contained'
+            color='primary'
+            startIcon={<download />}
+            onClick={handleDownload}
+          >
+            CV
+          </Button> */}
+
+          {/* <download onClick=
+            {() =>
+              handleDownload
+            }
+          /> */}
+          
+          <ArrowDownIcon className='arrowDown'
+            onClick={handleDownload}
+          />
+
         </div>
         <div className='downArrow'
           onClick={
@@ -36,7 +69,7 @@ function Home() {
           }
         >
           <ArrowDownIcon className='arrowDown'
-            style={{ fontSize: 100}}
+            style={{ fontSize: 100, marginBottom: 150 }}
           />
         </div>
       </div>

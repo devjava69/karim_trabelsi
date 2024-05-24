@@ -18,7 +18,7 @@ function Footer() {
                     }
                 />
             </div>
-            <p> &copy; 2022 karimtrabelsi-digital.com </p>
+            <p> &copy; 2022 </p>
         </div>
     )
 }
